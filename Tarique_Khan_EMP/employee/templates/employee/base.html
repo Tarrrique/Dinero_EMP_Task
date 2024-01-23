@@ -1,0 +1,90 @@
+{% comment %} <!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Add this to your base.html file in the <head> section -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy4WkE3V9Pw1ixtQ6U8xOcFqGJN9ISaP6D" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static 'employee/css/bootstrap.min.css' %}">
+</head>
+<body>
+    <div class="container" style="background-color: red !important;">
+    <h2 class="alert alert-info text-center "><span class="bg-dark">Employee Management System</span></h2>
+</div>
+<center>
+
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      
+      
+      <a class="navbar-brand" href="/">Department</a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+        <li class="nav-item">
+          <a class="nav-link active" href="{% url 'salary_report' %}"><h5>Salary Report</h5></a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+</center>
+<hr>
+    {% block content %}
+    {% endblock content %}
+    <script src="{% static 'employee/js/bootstrap.bundle.min.js' %}"></script>
+    
+  </body>
+  </html> {% endcomment %}
+
+
+
+  <!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy4WkE3V9Pw1ixtQ6U8xOcFqGJN9ISaP6D" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'employee/css/bootstrap.min.css' %}">
+</head>
+<body style="background-color: #f8f9fa; color: #212529;">
+
+    <div class="container" style="background-color: red !important;">
+        <h2 class="alert alert-info text-center" style="background-color: #17a2b8; color: #ffffff;"><span class="bg-dark">Employee Management System</span></h2>
+    </div>
+    <center>
+
+        <nav class="navbar navbar-expand-lg bg-light" style="border-bottom: 2px solid #dee2e6;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/" style="font-weight: bold; color: #007bff;">Department</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="{% url 'salary_report' %}" style="font-size: 18px; color: #007bff;"><h5>Salary Report</h5></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </center>
+    <hr>
+
+    {% block content %}
+    {% endblock content %}
+    <script src="{% static 'employee/js/bootstrap.bundle.min.js' %}"></script>
+    
+</body>
+</html>

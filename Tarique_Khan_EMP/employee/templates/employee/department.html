@@ -1,0 +1,43 @@
+{% extends 'employee/base.html' %}
+{% block content %}
+
+{% comment %} <div class="container">
+    <h1>Add Department</h1>
+    <div class="row">
+        <div class="col-4">
+<form method="post">
+    {{form.as_p}}
+    {% csrf_token %}
+    <input type="submit" class="btn btn-success" value="Submit">
+</form>
+</div> {% endcomment %}
+
+<div class="col-8">
+<table class="table table-striped table-hover" border="8px">
+    <thead>
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Floor</th>
+            <th scope="col">View Hierarchy</th>
+            <th scope="col">View Employee</th>
+            <th scope="col">View Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            {% for dt in data %}
+            <th scope="row">{{ dt.id}}</th>
+            <td>{{ dt.name}}</td>
+            <td>{{ dt.floor}}</td>
+            <td><a class="nav-link active" href="{% url 'department_reporting' dt.id %}">Hierarchy Report for: {{dt.name}} Department</a></td>
+            <td><a class="nav-link active" aria-current="page" href="{% url 'emp' dt.id %}">View Employee in {{dt.name}} Department </a></td>
+            <td><a class="nav-link active" aria-current="page" href="{% url 'salary' dt.id %}">View Employees Salary in {{dt.name}} Department </a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+</div>
+</div>
+{% endblock content %} 
