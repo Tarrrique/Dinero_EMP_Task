@@ -1,0 +1,50 @@
+**Requirements.txt:**
+Django==3.2.8
+
+sqlite==3.36.0       # Use for SQLite
+# or
+mysqlclient==2.1.0   # Use for MySQL
+
+
+
+# Other Django dependencies
+django-widget-tweaks==1.4.8
+
+
+**Setup Instructions:**
+
+1. Create a virtual environment:
+
+   python -m venv venv
+  
+
+   If using Python 3.3 or older:
+
+   virtualenv venv
+
+2. Install virtualenv:
+
+   pip install virtualenv
+  
+
+3. Activate the virtual environment:
+
+   - Windows:
+
+     
+     .\venv\Scripts\activate
+    
+
+   - macOS/Linux:
+
+    
+     source venv/bin/activate
+    
+
+4. Install required packages:
+
+  
+   pip install -r requirements.txt
+  
+
+These steps help set up a virtual environment and install the necessary packages for the project.
